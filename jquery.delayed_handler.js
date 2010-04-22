@@ -1,7 +1,7 @@
 /**
 * jquery delayed function execution.
 * Primarily useful if you are binding to keystrokes and want throttle actual event processing (like recalculation or ajax).
-*   A Matt Wilson job, (c) 2010 Greenview Data, Inc. <mwilson@greenviewdata.com>. Released under the MIT License.
+*   By Matt Wilson <mwilson@greenviewdata.com> (c) 2010 Greenview Data, Inc. Dual licensed (MIT/GPL), like jQuery itself.
 *
 *  Sample Usage:
 *  $('#my_text_input').bind('keyup', function() {

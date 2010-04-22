@@ -41,6 +41,19 @@
   <ul id="another-test-box-list">
   </ul>
   
+  <p>Incidentally, the code for this is ridiculously simple:</p>
+  
+  <pre><code>
+(function($) {
+  $.delayedHandler = (function() {
+    var timer_id = 0;
+    return function(wrapper, delay) {
+      clearTimeout(timer_id);
+      timer_id = setTimeout(wrapper, delay);
+    };
+  })();
+})(jQuery);
+  </code></pre>
   
 </body>
 </html>
