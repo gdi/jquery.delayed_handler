@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jquery.delayed_handler &mdash; functional test</title>
+  
+  <script src="jquery.js" type="text/javascript"></script>
+  <script src="jquery.delayed_handler.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+    $(function() {
+      $("#a-test-box").bind('keyup', function() {
+        var currentText = $(this).val();
+        $.delayedHandler(function() {
+          $("#a-test-box-list").append("<li>" + currentText + "</li>");
+        }, 200);
+      });
+      
+      $("#a-2nd-test-box").bind('keyup', function() {
+        var currentText = $(this).val();
+        $.delayedHandler(function() {
+          $("#another-test-box-list").append("<li>" + currentText + "</li>");
+        }, 200);
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>Thou shalt type into the following box:</h2>
+  
+  <label for="a-test-box">Type Here:</label>
+  <input type="text" id="a-test-box" placeholder="Begin thy typing here" />
+  
+  <h5>Items will be added to this list, after a reasonable delay</h5>
+  <ul id="a-test-box-list">
+  </ul>
+  
+  <label for="a-2nd-test-box">To confirm:</label>
+  <input type="text" id="a-2nd-test-box" placeholder="A Second Opportunity!" />
+  
+  <h5>Both boxes ought to be functional</h5>
+  <ul id="another-test-box-list">
+  </ul>
+  
+  
+</body>
+</html>
